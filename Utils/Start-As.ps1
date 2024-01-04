@@ -60,7 +60,7 @@ function Get-RunCommand {
             if (($RunAppExt -ne "exe") -and ($RunAppExt -ne "bat")) {
                 $PreArgs += "$RunApp"
             }
-            Write-Host $PreArgs
+            # Write-Host $PreArgs
             . $PSScriptRoot/Config-Shim.ps1
             Config-Shim -Path ([ref]$Path) -PreArgs ([ref]$PreArgs) -CurrentDir ([ref]$CurrentDir)
             . $PSScriptRoot/Create-Shim.ps1
